@@ -18,14 +18,15 @@
                 <div class="contain-name">
                     <div class="inpt">
                         <label for="nota" class="label">Notas</label>
-                        <input type=text name="nota" class="nota" required="" placeholder="=digite a nota">
+                        <input type=text name="nota1" class="nota" required="" placeholder="=digite a nota">
                     </div>
                     <div class="peso">
-                        <button class="bnt-peso" onclick="gerar(this)"></button>    
+                        <button class="bnt-peso" onclick="gerar(this)">gerar</button>   
                     </div> 
                 </div>
                 <div id="container"></div>   
- 
+                <button class="add" onclick="add()">adionar</button>
+                <button class="tra" onclick="tra()">apagar</button>
                 <button class="button_submit" type="submit">Calcular</button>
             </form>
             <p id="texto"></p>
