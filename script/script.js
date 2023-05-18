@@ -113,9 +113,3 @@ form.addEventListener('submit', (event) => {
         texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
     }
 })
-
-
-
-
-
-
