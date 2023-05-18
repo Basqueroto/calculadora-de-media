@@ -15,18 +15,24 @@
     <main>
         <section id="form">
             <form id="form" class="feed-form" action="">
-
-                <div class="contain-name">
-                    <div class="inpt">
-                        <label for="nota" class="label">Notas</label>
-                        <input type=text name="nota" class="nota" required="" placeholder="=digite a nota">
+                <div id="pai">
+                    <div class="contain-name">
+                        <div class="inpt">
+                            <label for="nota" class="label">Notas</label>
+                            <input type=text name="nota" class="nota" required="" placeholder="=digite a nota">
+                        </div>
+                        <div class="peso">
+                            <div id="peso-p" style="display: none;" value=>
+                                <input type="text" class="peso" name="peso" required>
+                                <button onclick="apagar(this)">apagar</button>
+                            </div>
+                            <button class="bnt-peso" onclick="gerar(this)">aparecer</button>    
+                        </div> 
                     </div>
-                    <div class="peso">
-                        <button class="bnt-peso" onclick="gerar(this)"></button>    
-                    </div> 
+                    <div id="container"></div>   
                 </div>
-                <div id="container"></div>   
- 
+                <button class="button_add" onclick="add()">gerar</button>
+                <button class="button_tra" onclick="tra()">apagar</button>
                 <button class="button_submit" type="submit">Calcular</button>
             </form>
             <p id="texto"></p>
