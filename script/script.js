@@ -8,7 +8,7 @@ function gerar (btn) {
     pai.innerHTML = ""
     pai.innerHTML = `
                <input type="text" class="peso" name="peso" required>
-               <button onclick="apagar(this)">apagar</button>
+               <button onclick="apagar(this)">Apagar</button>
         `
 }
 
@@ -16,7 +16,7 @@ function apagar (btn) {
     var pai = btn.parentElement
     pai.innerHTML = ""
     pai.innerHTML = `
-    <button class="bnt-peso" onclick="gerar(this)">gerar</button>           
+    <button class="bnt-peso" onclick="gerar(this)">Gerar</button>           
       `
 }
 
@@ -28,7 +28,7 @@ function add () {
             <input type=text name="nota1" class="nota" required="" placeholder="Digite a nota">
         </div>
         <div class="peso">
-            <button class="bnt-peso" onclick="gerar(this)">gerar</button>   
+            <button class="bnt-peso" onclick="gerar(this)">Gerar</button>   
         </div> 
     </div>
     `
