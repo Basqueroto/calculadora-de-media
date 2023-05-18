@@ -40,12 +40,25 @@ function tra () {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    for(var i = 0; i < pai.children.length; i++){
-        if(pai.children[i].tagName == "input")  {
-            
-        }
+
+    var inputs = document.querySelectorAll(".nota")
+    var peso = document.querySelectorAll(".peso")
+    var aInp = []
+    var aPeso = []
+
+    for (let i = 0; i < inputs.length; i++) {
+        aInp.push(inputs[i].value)
     }
 
+    for (let i = 0; i < peso.length; i++) {
+        aPeso.push(inputs[i].value)
+    }
+
+    
+
+
+    console.log(aInp)
+    console.log(aPeso)
 })
 
 
