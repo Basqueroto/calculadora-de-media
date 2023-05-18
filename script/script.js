@@ -3,6 +3,7 @@ var container = document.getElementById('container')
 var inp = document.getElementsByClassName('nota')
 var pai = document.getElementById('pai')
 var txt = document.getElementById('texto')
+var primari = document.getElementById('username')
 var contagem = 0
 var position = []
 
@@ -14,7 +15,7 @@ function gerar (btn) {
     pai.innerHTML = ""
     pai.innerHTML = `
                <input type="text" class="pesoB" name="peso" required>
-               <button data-indice="`+ n +`" onclick="apagar(this)">apagar</button>
+               <button data-indice="`+ n +`" onclick="apagar(this)" class="apagar_btn">apagar</button>
         `
 }
 
@@ -103,13 +104,15 @@ form.addEventListener('submit', (event) => {
         console.log(final)
     }
 
-    if (final >= 7) {
-        texto.innerHTML = "o aluno passou com a nota de " + final.toFixed(1)
-    }
-    else if (final >= 5) {
-        texto.innerHTML = "o aluno ficou de exame com a nota de " + final.toFixed(1)
-    }
-    else {
-        texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
+    if (primari.value != ""){
+        if (final >= 7) {
+            texto.innerHTML = "o aluno passou com a nota de " + final.toFixed(1)
+        }
+        else if (final >= 5) {
+            texto.innerHTML = "o aluno ficou de exame com a nota de " + final.toFixed(1)
+        }
+        else {
+            texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
+        }
     }
 })

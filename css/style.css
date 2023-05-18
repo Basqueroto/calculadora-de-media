@@ -28,6 +28,8 @@ main p {
     text-align: center;
     margin: 34px;
     margin-right: 281px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
 }
 
 /* ---------------------------------FORM - ESTILIZAÇÃO---------------------------------------- */
@@ -131,7 +133,8 @@ main p {
 /* ------------------------------------------------ INPUT ESLIZAÇÃO ------------------------------------------------- */
 .button_tra,
 .button_add,
-.bnt-peso {
+.bnt-peso,
+.apagar_btn {
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
@@ -166,20 +169,23 @@ main p {
 
 .button_tra:focus,
 .button_add:focus,
-.bnt-peso:focus {
+.bnt-peso:focus,
+.apagar_btn:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
 .button_tra:hover,
 .button_add:hover,
-.bnt-peso:hoverr {
+.bnt-peso:hover,
+.apagar_btn:hover {
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
 .button_tra:active,
 .button_add:active,
-.bnt-peso:active {
+.bnt-peso:active,
+.apagar_btn:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
