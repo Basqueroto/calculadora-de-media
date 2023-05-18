@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Média</title>
 </head>
+
 <body>
     <header>
         <h1>Calcule a Média</h1>
@@ -15,9 +22,13 @@
     <main>
         <section id="form">
             <form id="form" class="feed-form" action="">
+                <p class="heading">Notas/Média</p>
                 <div id="pai">
                     <div class="contain-name">
                         <div class="inpt">
+                            <label for="nome" class="nome">Nome</label>
+                            <input placeholder="Nome" id="username" class="inputField" type="text" required="">
+
                             <label for="nota" class="label">Notas</label>
                             <input type=text name="nota" class="nota" required="" placeholder="Digite a nota">
                         </div>
@@ -26,10 +37,10 @@
                                 <input type="text" class="peso" name="peso" required>
                                 <button onclick="apagar(this)">apagar</button>
                             </div>
-                            <button class="bnt-peso" onclick="gerar(this)">aparecer</button>    
-                        </div> 
+                            <button class="bnt-peso" onclick="gerar(this)">aparecer</button>
+                        </div>
                     </div>
-                    <div id="container"></div>   
+                    <div id="container"></div>
                 </div>
                 <button class="button_add" onclick="add()">gerar</button>
                 <button class="button_tra" onclick="tra()">apagar</button>
