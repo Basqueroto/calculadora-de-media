@@ -25,7 +25,7 @@ function add () {
     <div class="contain-name">
         <div class="inpt">
             <label for="nota" class="label">Notas</label>
-            <input type=text name="nota1" class="nota" required="" placeholder="=digite a nota">
+            <input type=text name="nota1" class="nota" required="" placeholder="Digite a nota">
         </div>
         <div class="peso">
             <button class="bnt-peso" onclick="gerar(this)">gerar</button>   
