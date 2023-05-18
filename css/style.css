@@ -20,6 +20,7 @@ header h1 {
 
 main #form {
     margin-left: 250px;
+    margin-top: 50px;
 }
 
 main p {
@@ -58,7 +59,7 @@ main p {
     height: 40px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgb(173, 173, 173);
+    border-bottom: 2px solid rgb(173, 173, 173,173);
     border-radius: 30px;
     margin: 10px 0;
     color: black;
@@ -125,16 +126,16 @@ main p {
     padding: 8px 15px;
     border-radius: 20px;
 }
-
-/* ------------------- INPUT ESLIZAÇÃO --------------- */
+/* ------------------------------------------------ INPUT ESLIZAÇÃO ------------------------------------------------- */
 .button_tra,
-.button_add {
+.button_add,
+.bnt-peso {
     align-items: center;
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 5px;
     border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #b061ff 0 -3px 0 inset;
     box-sizing: border-box;
     color: BLACK;
     cursor: pointer;
@@ -157,21 +158,26 @@ main p {
     white-space: nowrap;
     will-change: box-shadow, transform;
     font-size: 13px;
+    margin: 5px;
+    margin-top: 15px;
 }
 
 .button_tra:focus,
-.button_add:focus {
+.button_add:focus,
+.bnt-peso:focus {
     box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
 }
 
 .button_tra:hover,
-.button_add:hover {
+.button_add:hover,
+.bnt-peso:hoverr {
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
 .button_tra:active,
-.button_add:active {
+.button_add:active,
+.bnt-peso:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
 }
