@@ -3,7 +3,7 @@ var container = document.getElementById('container')
 var inp = document.getElementsByClassName('nota')
 var pai = document.getElementById('pai')
 
-function gerar (btn) {
+function gerar(btn) {
     var pai = btn.parentElement
     pai.innerHTML = ""
     pai.innerHTML = `
@@ -12,7 +12,7 @@ function gerar (btn) {
         `
 }
 
-function apagar (btn) {
+function apagar(btn) {
     var pai = btn.parentElement
     pai.innerHTML = ""
     pai.innerHTML = `
@@ -20,7 +20,7 @@ function apagar (btn) {
       `
 }
 
-function add () {
+function add() {
     container.innerHTML += `
     <div class="contain-name">
         <div class="inpt">
@@ -34,8 +34,8 @@ function add () {
     `
 }
 
-function tra () {
-    container.removeChild(container.lastElementChild) 
+function tra() {
+    container.removeChild(container.lastElementChild)
 }
 
 form.addEventListener('submit', (event) => {
@@ -54,7 +54,7 @@ form.addEventListener('submit', (event) => {
         aPeso.push(inputs[i].value)
     }
 
-    
+
 
 
     console.log(aInp)

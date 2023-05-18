@@ -60,7 +60,7 @@ main p {
     height: 40px;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid rgb(173, 173, 173,173);
+    border-bottom: 2px solid rgb(173, 173, 173, 173);
     border-radius: 30px;
     margin: 10px 0;
     color: black;
@@ -127,6 +127,7 @@ main p {
     padding: 8px 15px;
     border-radius: 20px;
 }
+
 /* ------------------------------------------------ INPUT ESLIZAÇÃO ------------------------------------------------- */
 .button_tra,
 .button_add,
@@ -183,7 +184,7 @@ main p {
     transform: translateY(2px);
 }
 
-.button_add{
+.button_add {
     padding-left: 13px;
     padding-right: 13px;
 }
