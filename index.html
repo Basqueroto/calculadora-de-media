@@ -15,13 +15,17 @@
         <section id="form">
             <form id="form" class="feed-form" action="">
 
-                <label for="email" class="label">Notas</label>
-                <input type=text name="notas" id="notas" required="" placeholder="Altura">
-
-                <label for="username" class="label">Peso</label>
-                <input type="text" name="peso" id="peso" required="" placeholder="Peso">
-
-
+                <div class="contain-name">
+                    <div class="inpt">
+                        <label for="nota" class="label">Notas</label>
+                        <input type=text name="nota" class="nota" required="" placeholder="=digite a nota">
+                    </div>
+                    <div class="peso">
+                        <button class="bnt-peso"></button>    
+                    </div> 
+                </div>
+                <div id="container"></div>   
+ 
                 <button class="button_submit" type="submit">Calcular</button>
             </form>
             <p id="texto"></p>
