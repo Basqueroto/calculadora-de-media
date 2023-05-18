@@ -6,7 +6,7 @@ var txt = document.getElementById('texto')
 var contagem = 0
 var position = []
 
-function gerar(btn) {
+function gerar (btn) {
     var pai = btn.parentElement
     var n = btn.dataset.indice
     position.push(parseFloat(n))
@@ -18,7 +18,7 @@ function gerar(btn) {
         `
 }
 
-function apagar(btn) {
+function apagar (btn) {
     var pai = btn.parentElement
     var n = btn.dataset.indice
     if (position.length < 2) {
@@ -38,6 +38,8 @@ function apagar(btn) {
 }
 
 function add () {
+    contagem += 1
+    console.log(contagem)
     container.innerHTML += `
     <div class="contain-name">
         <div class="inpt">
@@ -52,6 +54,8 @@ function add () {
 }
 
 function tra () {
+    contagem = contagem - 1 
+    position.pop()  
     container.removeChild(container.lastElementChild) 
 }
 
@@ -72,10 +76,40 @@ form.addEventListener('submit', (event) => {
     for (var i = 0; i < peso.length; i++) {
         aPeso.push(parseFloat(peso[i].value))
     }
+    console.log(position)
+    if (aPeso.length > 0) {
+        for(var i = 0; i < position.length; i++){
+            aInp[position[i]] = aPeso[i] * aInp[position[i]]
+        }
+        for(var i = 0; i < aPeso.length; i++) {
+            soma += aPeso[i]
+        }
+        for(var i = 0; i < aInp.length; i++) {
+            somanote += aInp[i]
+        }
 
-    
+        console.log(aPeso)
+        console.log(aInp)
 
+        soma += aInp.length - aPeso.length
+        final = somanote / soma
+        console.log(final)
+    }
+    else {
+        for(var i = 0; i < aInp.length; i++) {
+            somanote += aInp[i]
+        }
+        final = somanote / aInp.length
+        console.log(final)
+    }
 
-    console.log(aInp)
-    console.log(aPeso)
+    if (final >= 7) {
+        texto.innerHTML = "o aluno passou com a nota de " + final.toFixed(1)
+    }
+    else if (final >= 5) {
+        texto.innerHTML = "o aluno ficou de exame com a nota de " + final.toFixed(1)
+    }
+    else {
+        texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
+    }
 })
