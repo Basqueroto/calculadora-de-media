@@ -10,12 +10,13 @@
 
 header {
     background-color: black;
-    padding: 10px;
+    padding: 15px;
 }
 
 header h1 {
     font-size: 20px;
     color: white;
+    font-family: 'Quicksand', sans-serif;
 }
 
 main #form {
