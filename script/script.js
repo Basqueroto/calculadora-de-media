@@ -5,7 +5,7 @@ var pai = document.getElementById('pai')
 var txt = document.getElementById('texto')
 var contagem = 0
 var position = []
-
+var aluno = {nota:[], final: 0}
 function gerar (btn) {
     var pai = btn.parentElement
     var n = btn.dataset.indice
@@ -112,4 +112,13 @@ form.addEventListener('submit', (event) => {
     else {
         texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
     }
+    var x = []
+    for (var i = 0; i < aInp.length; i++) {
+        aluno.nota.push(aInp[i])
+    }
+    aluno.final = final
+
+    console.log(aluno)
 })
+
+
