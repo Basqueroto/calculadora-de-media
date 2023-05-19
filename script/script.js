@@ -6,7 +6,7 @@ var txt = document.getElementById('texto')
 var primari = document.getElementById('username')
 var contagem = 0
 var position = []
-var aluno = {nota:[], final: 0}
+var aluno = {nota:[], final: 0, estado:''}
 function gerar (btn) {
     var pai = btn.parentElement
     var n = btn.dataset.indice
@@ -72,11 +72,12 @@ form.addEventListener('submit', (event) => {
 
     for (var i = 0; i < inputs.length; i++) {
         aInp.push(parseFloat(inputs[i].value))
+        aluno.nota.push(parseFloat(inputs[i].value))
     }
-
     for (var i = 0; i < peso.length; i++) {
         aPeso.push(parseFloat(peso[i].value))
     }
+
     console.log(position)
     if (aPeso.length > 0) {
         for(var i = 0; i < position.length; i++){
@@ -107,20 +108,20 @@ form.addEventListener('submit', (event) => {
     if (primari.value != ""){
         if (final >= 7) {
             texto.innerHTML = "o aluno passou com a nota de " + final.toFixed(1)
+            aluno.estado = 'passou'
         }
         else if (final >= 5) {
             texto.innerHTML = "o aluno ficou de exame com a nota de " + final.toFixed(1)
+            aluno.estado = 'de exame'
         }
         else {
             texto.innerHTML = "o aluno foi reprovado " + final.toFixed(1)
+            aluno.estado = 'reprovou'
         }
     }
     var x = []
-    for (var i = 0; i < aInp.length; i++) {
-        aluno.nota.push(aInp[i])
-    }
+    aluno.nota.splice(0,1)
     aluno.final = final
-
     console.log(aluno)
 })
 
